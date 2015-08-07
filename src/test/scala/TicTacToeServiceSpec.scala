@@ -16,19 +16,24 @@ class TicTacToeServiceSpec extends FlatSpec with Matchers {
     resp should be(false)
   }
 
-  it should "check if game is won with crosses" in {
+  it should "check if game is won with circles" in {
     val winInput = Array(1, 2, 1, 1, 1, 1, 2, 2, 1)
     val resp = service.isGameWon(Game(winInput))
     resp should be(true)
   }
 
-  it should "check if game is won with circles" in {
+  it should "check if game is won with crosses" in {
     val winInput = Array(1, 2, 1, 2, 2, 2, 1, 2, 1)
     val resp = service.isGameWon(Game(winInput))
     resp should be(true)
   }
   it should "check if game is lost " in {
     val winInput = Array(2, 2, 1, 1, 1, 2, 2, 2, 1)
+    val resp = service.isGameWon(Game(winInput))
+    resp should be(false)
+  }
+  it should "return false if less than 9 numbers in input array " in {
+    val winInput = Array(2, 2, 1, 1, 1, 2, 2)
     val resp = service.isGameWon(Game(winInput))
     resp should be(false)
   }
