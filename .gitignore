@@ -13,10 +13,6 @@ src_managed/
 project/boot/
 project/plugins/project/
 
-# SM Specific
-__GeneratedProxy__*.scala
-db.h2.db
-config.properties.*
 
 # Scala-IDE specific
 .scala_dependencies
@@ -42,10 +38,6 @@ user.properties
 # sbteclipse
 .target
 
-# sublime text
-*.sublime-workspace
-*.sublime-project
-
 # vim
 *.swp
 tags
@@ -57,5 +49,5 @@ ctags
 vagrant_ansible_inventory_*
 *.iml
 
-# MAC
+# MAC OS
 .DS_Store
